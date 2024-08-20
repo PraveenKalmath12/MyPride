@@ -1,0 +1,85 @@
+/* variables */
+:root{
+    --primary-color:#d30000;
+    --primary-hover:#fa2626;
+    --bg:rgb(233, 220, 233);
+    --base-font:Poppins;
+    --base: 18px;
+    --text:rgb(54, 54, 54);
+    --fade:#4d4d4d;
+    --mobfont:36px;
+    --lg:992px;
+    @media (max-width:992px) {
+      --mobfont:28px;
+    }
+    @media (max-width:767px) {
+      --mobfont:20px;
+    }
+    @media (max-width:576px) {
+      --mobfont:16px;
+    }
+    @media (max-width:444px) {
+      --mobfont:14px;
+      --base: 14px;
+    }
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  overflow-x: hidden;
+}
+
+body{
+    font-family: Poppins, sans-serif; /* Use the specified font */
+    font-size: var(--base);
+    background-color: var(--bg);
+}
+*{
+    margin: 0;
+    font-family: Poppins, sans-serif;
+}
+.mo{
+    margin: 0 !important
+}
+.gt0{
+  padding-top: 0;
+}
+.gr0{
+  padding-right: 0;
+}
+.gb0{
+  padding-bottom: 0;
+}
+.gl0{
+  padding-left: 0;
+}
+.scrollbar{
+  overflow: hidden;
+  overflow-y: auto;
+}
+.p-r-5{
+  padding-right: 5vw;
+}
+/* margin top */
+.mt-9{
+  margin-top: 3rem;
+}
+@media (max-width:444px){
+  .mt-9{
+    margin-top: 4rem;
+  }
+}
+@media (min-width:992px){
+  .mt-9{
+    margin-top: 9rem;
+  }
+}
+@media (min-width:576px){
+  .mt-9{
+    margin-top: 8rem;
+  }
+}
+

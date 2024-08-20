@@ -1,0 +1,1150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- custom -->
+  <link rel="icon" href="./src/Footerlogo.png" type="image/png">
+  <link rel="stylesheet" href="style/global.css">
+  <link rel="stylesheet" href="style/index.css">
+  <link rel="stylesheet" href="style/card.css">
+  
+  <title>Mypridegames</title>
+  <style>
+    .modal-open .page-content {
+      display: none;
+    }
+
+    .modal-dialog {
+      max-width: 100%;
+      top: 8vh;
+      margin: 1%;
+    }
+
+    .modal-body {
+      max-height: 70vh;
+      overflow-y: auto;
+
+    }
+
+    .text-justify {
+      text-align: justify;
+      font-size: 12px;
+    }
+
+    .text-align-center {
+      text-align: center;
+      /* Center text inside */
+    }
+
+    
+    #faqs-container {
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.faq-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.faq-header {
+    background-color: #f7f7f7;
+    cursor: pointer;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-header .icon {
+    font-size: 10px;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+.faq-header:hover .icon {
+    color: #007BFF;
+}
+
+.faq-header .question {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.answer {
+    /* padding: 15px; */
+    color: #555;
+    font-size: 14px;
+    text-align: justify;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <div class=" container-fluid px-0" >
+    <nav class="navbar navbar-expand-lg bg-light prime fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img class="logo" loading="eager" alt="Company Logo" src="src/Footerlogo.png" width="70" height="auto">
+        </a>
+        <!-- Items on the right -->
+
+        <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse gap-4 navinner" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0 gap-2 mobilenav">
+            <li class="nav-item">
+              <a class="nav-link" href="#carouselExampleControls">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#games">Games</a>
+            </li>
+            <li class="nav-item">
+            </li>
+            <li class="nav-item">
+              <a href="#"  class="nav-link" data-bs-toggle="modal" data-bs-target="#FAQModal">FAQs</a>
+            </li>
+          </ul>
+          <a href="#contact" class="btn contact-us-btn">Contact Us</a>
+        </div>
+      </div>
+    </nav>
+    <!-- slider -->
+    <div id="carouselExampleControls" class=" carousel slide" data-bs-ride="carousel" style="padding-top: 9vh;" >
+      <div class="carousel-inner">
+        <div class="carousel-item active imgd " data-bs-interval="10000">
+          <img src="src/main-screen.png" class="d-block w-100" alt="..." loading="e">
+        </div>
+        <div class="carousel-item imgd" data-bs-interval="10000">
+          <img src="src/main-screen2.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item imgd" data-bs-interval="10000">
+          <img src="src/main-screen3.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item imgd" data-bs-interval="10000">
+          <img src="src/main-screen4.png" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- download section -->
+
+    <div class="container-fluid  d-flex justify-content-center mt-9" id="">
+      <div class="dwn-parent">
+        <div class="dwn-left">
+          <span>Download Our Latest</span><span><br>Games</span>
+        </div>
+        <div class="dwn-right">
+          <button class="btn">Coming soon...</button>
+        </div>
+      </div>
+    </div>
+    <!-- about section -->
+    <div class=" main container  mt-9"  id="about">
+      <div class="about-head">
+        <h4 class="about">About</h4>
+        <h4 class="mypride">MyPride</h4>
+      </div>
+      <div class="about-body row mt-5">
+        <div class="about-img col-md-5">
+          <img src="src/abouright@2x.png" alt="aboutmypride" loading="lazy" class="img w-100">
+        </div>
+        <div class="about-text col-md-5 mt-3">
+          <div class="about-title ">
+            <h2>My Pride- Play proud, win loud</h2>
+          </div>
+          <div class="mt-2">
+            <spap>My Pride is more than just a gaming platform—it's a vibrant
+
+              community where gamers come together to play, connect,
+
+              and thrive. With a diverse selection of real money games
+
+              spanning various genres and styles, we're dedicated to
+
+              providing an exceptional gaming experience for players of
+
+              all backgrounds and skill levels. Driven by our passion for
+
+              gaming and commitment to excellence, we strive to create
+
+              a welcoming and inclusive environment where everyone feels
+
+              at home. Whether you're a casual player looking for some fun
+
+              or a competitive gamer seeking thrilling challenges, there's
+
+              something for you at My Pride.</span>
+          </div>
+          <!-- <div class="mt-2">
+            <button class="btn about-btn">
+              About More
+            </button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- Games sectioin -->
+    <div class="main container  mt-9"  id="games">
+      <div class="gms-head">
+        <div class="op">
+          <h2>Our Popular</h2>
+        </div>
+        <div class="gms">
+          <h2>Games</h2>
+        </div>
+      </div>
+
+      <div class="m-4"></div>
+      <!-- cards are here -->
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-5 col-md-5 col-lg-3 my-4  ">
+            <div class="card text-center">
+              <img src="src/rummy.png" alt="rummy" class="card-img-top" loading="lazy">
+              <div class="card-body">
+                <h6 class="card-title">My Pride Rummy </h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-5 col-md-5 col-lg-3 my-4  ">
+            <div class="card text-center">
+              <img src="src/ludo.png" alt="rummy" class="card-img-top">
+              <div class="card-body">
+                <h6 class="card-title">My Pride Ludo </h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-5 col-md-5 col-lg-3 my-4  ">
+            <div class="card text-center">
+              <img src="src/crck.png" alt="rummy" class="card-img-top">
+              <div class="card-body">
+                <h6 class="card-title">My Pride XI </h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-5 col-md-5 col-lg-3 my-4  ">
+            <div class="card text-center">
+              <img src="src/poker.png" alt="rummy" class="card-img-top">
+              <div class="card-body">
+                <h6 class="card-title">My Pride Poker </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Showcase -->
+
+    <div class="container-lg justify-content-center d-flex  bg-light mt-9">
+      <div class="row w-100">
+        <div class="col-sm-12 p-4 border-solid bg-light d-flex flex-row row justify-content-evenly">
+          <div class="shw-left d-flex flex-column col-sm-6">
+            <div class="row align-items-center">
+              <!-- head -->
+              <div class="col-5 overflow-hidden shw-img-p">
+                <img class="img-fluid shw-img" src="src/shw-1sm.png" alt="ttt" loading="lazy">
+              </div>
+              <div class="col-6 shw-h px-0">
+                <h6>Mypride Rummy</h6>
+                <span>Rummy</span><span>Game</span>
+              </div>
+            </div>
+            <div class="container">
+              <!-- para -->
+              <div class="shw-para mt-4 ms-2">
+                <span><strong>"MyPride Rummy"</strong> is a strategic card game for 2 to 6 players. Players aim to form
+                  sets and runs of cards from a standard deck. The game combines skillful play with calculated risks as
+                  players strive to be the first to lay down all their cards. Victory hinges on smart decisions and
+                  tactical discards.</span>
+              </div>
+            </div>
+            <div>
+              <!-- button -->
+            </div>
+          </div>
+          <div class="shw-right  col-4">
+            <img src="src/shw-1mbb.png" alt="Showcase" loading="lazy" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="container-lg justify-content-center d-flex  bg-light mt-9">
+      <div class="row w-100">
+        <div class="col-sm-12 p-4 border-solid bg-light d-flex flex-row row justify-content-evenly">
+          <div class="shw-left d-flex flex-column col-sm-6">
+            <div class="row align-items-center">
+              <!-- head -->
+              <div class="col-5 overflow-hidden shw-img-p">
+                <img class="img-fluid shw-img" src="src/shw-poker.png" alt="ttt" loading="lazy">
+              </div>
+              <div class="col-6 shw-h px-0">
+                <h6>Mypride Poker</h6>
+                <span>Poker</span><span>Game</span>
+              </div>
+            </div>
+            <div class="container">
+              <!-- para -->
+              <div class="shw-para mt-4 ms-2">
+                <span><strong>"MyPride Poker"</strong>is an exciting card game where players
+                  strive to showcase their strategic prowess and
+                  confidence at the poker table. Competing against 2 to 8
+                  players, participants aim to build the strongest hand
+                  possible using a variety of poker variants such as Texas
+                  Hold'em, Omaha, or Seven-Card Stud. With each hand,
+                  players bet, bluff, and make calculated decisions to
+                  outsmart their opponents and emerge victorious.</span>
+              </div>
+            </div>
+            <div>
+              <!-- button -->
+            </div>
+          </div>
+          <div class="shw-right  col-4">
+            <img src="src/shw-poker-mb.png" alt="Showcase" loading="lazy" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="container-lg justify-content-center d-flex  bg-light mt-9">
+      <div class="row w-100">
+        <div class="col-sm-12 p-4 border-solid bg-light d-flex flex-row row justify-content-evenly">
+          <div class="shw-left d-flex flex-column col-sm-6">
+            <div class="row align-items-center">
+              <!-- head -->
+              <div class="col-5 overflow-hidden shw-img-p">
+                <img class="img-fluid shw-img" src="src/shw-poker.png" alt="ttt" loading="lazy">
+              </div>
+              <div class="col-6 shw-h px-0">
+                <h6>Mypride Ludo</h6>
+                <span>Ludo</span><span>Game</span>
+              </div>
+            </div>
+            <div class="container">
+              <!-- para -->
+              <div class="shw-para mt-4 ms-2">
+                <span><strong>"MyPride Ludo"</strong> brings the timeless excitement of the
+                  classic board game to a whole new level. In this
+                  exhilarating race to the finish, players compete with
+                  up to four opponents to navigate their tokens from
+                  start to finish, all while showcasing their strategic
+                  prowess and asserting their pride. As the game begins,
+                  each player selects their color and places their four
+                  tokens in their respective starting zones. </span>
+              </div>
+            </div>
+            <div>
+              <!-- button -->
+            </div>
+          </div>
+          <div class="shw-right  col-4">
+            <img src="src/shw-ludo-mb.png" alt="Showcase" loading="lazy" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+    <div class="container-lg justify-content-center d-flex  bg-light mt-9">
+      <div class="row w-100">
+        <div class="col-sm-12 p-4 border-solid bg-light d-flex flex-row row justify-content-evenly">
+          <div class="shw-left d-flex flex-column col-sm-6">
+            <div class="row align-items-center">
+              <!-- head -->
+              <div class="col-5 overflow-hidden shw-img-p">
+                <img class="img-fluid shw-img" src="src/shw-1sm.png" alt="ttt" loading="lazy">
+              </div>
+              <div class="col-6 shw-h px-0">
+                <h6>Mypride XI</h6>
+                <span>Cricket</span><span>Game</span>
+              </div>
+            </div>
+            <div class="container">
+              <!-- para -->
+              <div class="shw-para mt-4 ms-2">
+                <span><strong>"MyPride Cricket"</strong> Step onto the pitch and experience the
+                  thrill of the game as you lead your team to victory. Bat,
+                  bowl, and field your way to glory in this immersive cricket
+                  experience, where every run scored and wicket taken
+                  brings you closer to asserting your pride as a champion. </span>
+              </div>
+            </div>
+            <div>
+              <!-- button -->
+            </div>
+          </div>
+          <div class="shw-right  col-4">
+            <img src="src/shw-crck-mb.png" alt="Showcase" loading="lazy" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <section id="contact" class="main container-lg justify-content-center d-flex  bg-light mt-9" >
+      <div class="container-lg d-flex">
+        <div class="contact-container w-100  ">
+          <div class="gms-head ">
+            <div class="gms">
+              <h2>Contact</h2>
+            </div>
+            <div class="op">
+              <h2>Us</h2>
+            </div>
+          </div>
+          <p class="text-center text-muted mb-5">If you have any questions, feel free to reach out to us. We're here to
+            help!</p>
+          <div class="row contact-flex">
+            <!-- Google Map Embed -->
+            <div class="col-lg-7 mb-4">
+              <div class="map-container rounded shadow-sm overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.8698853090004!2d77.57832259999999!3d13.0051057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17f7bdd761df%3A0x6f139ee562f6ca93!2sAspridetech%20Solutions%20Private%20Limited!5e0!3m2!1sen!2sin!4v1724054891946!5m2!1sen!2sin"
+                  width="1000px" height="450px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-5">
+              <div class="contact-form">
+                <form action="#" method="post">
+                  <div class="form-group mb-2">
+                    <label for="name" class="form-label">Name</label><span class="text-danger ms-2">*</span>
+                    <input type="text" id="name" name="name" class="form-control rounded-pill" required>
+                  </div>
+                  <div class="form-group mb-2">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" class="form-control rounded-pill" required>
+                  </div>
+                  <div class="form-group mb-2">
+                    <label for="phone" class="form-label">Phone Number</label><span class="text-danger ms-2">*</span>
+                    <input type="text" id="phone" name="phone" class="form-control rounded-pill" required>
+                  </div>
+
+                  <div class="form-group mb-2">
+                    <label for="message" class="form-label">Message</label><span class="text-danger ms-2">*</span>
+                    <textarea id="message" name="message" rows="5" class="form-control rounded" required></textarea>
+                  </div>
+                  <button type="submit" class="btn about-btn w-100 py-2 mb-5 rounded-pill">Send Message</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer section -->
+    <footer class="container-fluid px-4 py-3 mt-5" id="footer">
+      <div class="row justify-content-center">
+        <!-- Column 1: Logo and Social Links -->
+        <div class="col-md-3 col-12 d-flex flex-column align-items-center mb-4 mb-md-0 text-center">
+          <a class="navbar-brand mb-3" href="#">
+            <img class="logo" loading="eager" alt="Company Logo" src="src/Footerlogo.png" width="120" height="auto">
+          </a>
+          <div class="d-flex flex-wrap justify-content-center">
+            <div class="me-3 mb-2">
+              <a href="https://www.facebook.com/profile.php?id=61564418132148">
+                <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_d_49_206)">
+                  <circle cx="31.001" cy="27" r="17" fill="white"/>
+                  </g>
+                  <g clip-path="url(#clip0_49_206)">
+                  <path d="M32.9995 22.9925H34.095V21.0845C33.906 21.0585 33.256 21 32.499 21C30.9195 21 29.8375 21.9935 29.8375 23.8195V25.5H28.0945V27.633H29.8375V33H31.9745V27.6335H33.647L33.9125 25.5005H31.974V24.031C31.9745 23.4145 32.1405 22.9925 32.9995 22.9925Z" fill="black"/>
+                  </g>
+                  <defs>
+                  <filter id="filter0_d_49_206" x="0.000976562" y="0" width="62" height="62" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                  <feOffset dy="4"/>
+                  <feGaussianBlur stdDeviation="7"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_49_206"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_49_206" result="shape"/>
+                  </filter>
+                  <clipPath id="clip0_49_206">
+                  <rect width="12" height="12" fill="white" transform="translate(25.001 21)"/>
+                  </clipPath>
+                  </defs>
+                  </svg>
+              </a>
+            </div>
+            <div class="me-3 mb-2">
+              <a href="https://www.instagram.com/mypridegames/">
+                <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_d_49_206)">
+                    <circle cx="31" cy="27" r="17" fill="white"/>
+                  </g>
+                  <path d="M31 14.273c-6.904 0-12.545 5.64-12.545 12.545 0 6.904 5.64 12.545 12.545 12.545 6.904 0 12.545-5.64 12.545-12.545 0-6.904-5.64-12.545-12.545-12.545zm0 21.818c-5.11 0-9.273-4.163-9.273-9.273 0-5.11 4.163-9.273 9.273-9.273 5.11 0 9.273 4.163 9.273 9.273 0 5.11-4.163 9.273-9.273 9.273zm0-14.182c-2.906 0-5.273 2.367-5.273 5.273 0 2.906 2.367 5.273 5.273 5.273 2.906 0 5.273-2.367 5.273-5.273 0-2.906-2.367-5.273-5.273-5.273zm6.545 5.273c0 1.021-.854 1.818-1.818 1.818-1.021 0-1.818-.854-1.818-1.818 0-1.021.854-1.818 1.818-1.818 1.021 0 1.818.854 1.818 1.818z" fill="black"/>
+                  <defs>
+                    <filter id="filter0_d_49_206" x="0.000976562" y="0" width="62" height="62" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                      <feOffset dy="4"/>
+                      <feGaussianBlur stdDeviation="7"/>
+                      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_49_206"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_49_206" result="shape"/>
+                    </filter>
+                  </defs>
+                </svg>
+                
+                
+               
+              </a>
+            </div>
+            <div class="me-3 mb-2">
+              <a href="">
+                <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_d_49_217)">
+                  <circle cx="31.001" cy="27" r="17" fill="white"/>
+                  </g>
+                  <g clip-path="url(#clip0_49_217)">
+                  <path d="M37.001 23.4692C36.5175 23.6812 36.0024 23.8218 35.4654 23.8901C36.0179 23.5602 36.4395 23.0418 36.6378 22.417C36.1227 22.7241 35.5539 22.9411 34.9478 23.0621C34.4587 22.5413 33.7615 22.2188 33.001 22.2188C31.5255 22.2188 30.3377 23.4164 30.3377 24.8846C30.3377 25.0958 30.3555 25.2989 30.3994 25.4923C28.1837 25.3842 26.2232 24.3223 24.9061 22.7046C24.6762 23.1036 24.5413 23.5602 24.5413 24.0518C24.5413 24.9748 25.0166 25.7929 25.7251 26.2666C25.2969 26.2585 24.8769 26.1342 24.521 25.9384C24.521 25.9465 24.521 25.9571 24.521 25.9676C24.521 27.2627 25.4448 28.3385 26.6562 28.5863C26.4393 28.6456 26.2029 28.6741 25.9575 28.6741C25.7869 28.6741 25.6146 28.6643 25.4529 28.6286C25.7982 29.684 26.7781 30.4599 27.9432 30.4851C27.0365 31.1944 25.8852 31.6218 24.6388 31.6218C24.4202 31.6218 24.2106 31.6121 24.001 31.5852C25.1815 32.3466 26.5807 32.7812 28.0895 32.7812C32.9937 32.7812 35.675 28.7188 35.675 25.1974C35.675 25.0796 35.6709 24.9658 35.6652 24.8529C36.1942 24.4775 36.6386 24.0087 37.001 23.4692Z" fill="black"/>
+                  </g>
+                  <defs>
+                  <filter id="filter0_d_49_217" x="0.000976562" y="0" width="62" height="62" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                  <feOffset dy="4"/>
+                  <feGaussianBlur stdDeviation="7"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_49_217"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_49_217" result="shape"/>
+                  </filter>
+                  <clipPath id="clip0_49_217">
+                  <rect width="13" height="13" fill="white" transform="translate(24.001 21)"/>
+                  </clipPath>
+                  </defs>
+                  </svg>
+              </a>
+            </div>
+            <div class="me-3 mb-2">
+              <a href="">
+                <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_d_49_224)">
+                  <circle cx="31.001" cy="27" r="17" fill="white"/>
+                  </g>
+                  <g clip-path="url(#clip0_49_224)">
+                  <path d="M35.9983 31.9998V31.9993H36.0011V27.9651C36.0011 25.9915 35.5762 24.4712 33.2689 24.4712C32.1598 24.4712 31.4154 25.0799 31.1116 25.6569H31.0795V24.6554H28.8918V31.9993H31.1698V28.3629C31.1698 27.4054 31.3513 26.4796 32.537 26.4796C33.7053 26.4796 33.7227 27.5723 33.7227 28.4243V31.9998H35.9983Z" fill="black"/>
+                  <path d="M25.1824 24.6562H27.463V32.0001H25.1824V24.6562Z" fill="black"/>
+                  <path d="M26.3219 21C25.5927 21 25.001 21.5917 25.001 22.3209C25.001 23.0501 25.5927 23.6542 26.3219 23.6542C27.0511 23.6542 27.6428 23.0501 27.6428 22.3209C27.6424 21.5917 27.0506 21 26.3219 21V21Z" fill="black"/>
+                  </g>
+                  <defs>
+                  <filter id="filter0_d_49_224" x="0.000976562" y="0" width="62" height="62" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                  <feOffset dy="4"/>
+                  <feGaussianBlur stdDeviation="7"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_49_224"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_49_224" result="shape"/>
+                  </filter>
+                  <clipPath id="clip0_49_224">
+                  <rect width="11" height="11" fill="white" transform="translate(25.001 21)"/>
+                  </clipPath>
+                  </defs>
+                  </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Column 2: Navigation Links -->
+        <div class="col-md-3 col-12 d-flex flex-column align-items-center mb-4 mb-md-0 text-center">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="#carouselExampleControls" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#games" class="nav-link">Games</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
+          </ul>
+        </div>
+    
+        <!-- Column 3: Legal Links -->
+        <div class="col-md-3 col-12 d-flex flex-column align-items-center text-center mb-4">
+          <div class="text-light mb-3">
+            <a style="text-decoration: none;" href="#" class="d-block mb-2 text-light" data-bs-toggle="modal" data-bs-target="#termsModal">Terms and Conditions</a>
+            <a href="#" style="text-decoration: none;" class="d-block mb-2 text-light" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a>
+            <a href="#" style="text-decoration: none;" class="d-block mb-2 text-light" data-bs-toggle="modal" data-bs-target="#FAQModal">FAQs</a>
+          
+          </div>
+        </div>
+    
+        <!-- Column 4: Contact Information -->
+        <div class="col-md-3 col-12 d-flex flex-column align-items-center text-center mb-4">
+          <div class="align-items-center">
+            <h5 class="mb-2">Contact Us</h5>
+            <p class="mb-1">Third Floor, 32, 2nd Main Rd,<br />Vyalikaval, Sadashiva Nagar,<br />Palace Guttahalli,<br />Bengaluru,<br />Karnataka 560003</p>
+            <p class="mb-0">+91 7676350489</p>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4" />
+      <div class="text-center">
+        <p class="mb-0" style="letter-spacing: 1.5px;">Copyright © 2024 AsprideTech Solutions Pvt Ltd (Mypride games) All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+  </div>
+  <!-- //terma and conditions -->
+  <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content ">
+        <div class="modal-header  ">
+          <div class="gms-head d-flex justify-content-center align-items-center w-100">
+            <div class="op d-flex">
+              <h3>Terms</h3>
+              <h3>&ensp;&</h3>
+            </div>
+            <div class="gms">
+              <h3>Conditions</h3>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <h6>1. Introduction</h6>
+            <ul class="text-justify text-secondary ">
+              <li>Welcome to the MyPride Gaming Platform, operated by AsprideTech Solutions Pvt Ltd. These terms and
+                conditions ("Terms") govern your access to and use of our online gaming platform ("Platform"). By
+                registering, accessing, or using the Platform, you agree to comply with and be bound by these Terms. 
+              </li>
+              <li>If you do not agree with any part of these Terms, please do not use the Platform. AsprideTech
+                Solutions Pvt Ltd reserves the right to modify these Terms at any time, and any changes will be
+                effective immediately upon posting. Your continued use of the Platform after such changes constitutes
+                your acceptance of the new Terms.</li>
+            </ul>
+            <h6>2. Eligibility</h6>
+            <ul class="text-justify text-secondary ">
+              <li>Age Requirement: You must be at least 18 years old to create an account and participate in games on
+                the Platform. </li>
+              <li>Legal Compliance: You represent and warrant that you are not located in any jurisdiction where
+                participating in skill-based gaming for money is prohibited by law. It is your responsibility to ensure
+                that your use of the Platform is compliant with all applicable laws and regulations. </li>
+              <li>Verification: AsprideTech Solutions Pvt Ltd may require you to provide proof of identity, age, and
+                residency. Failure to provide accurate and truthful information may result in suspension or termination
+                of your account. </li>
+            </ul>
+            <h6>3. Account Registration and Security </h6>
+            <ul class="text-justify text-secondary ">
+              <li>Registration: To use the Platform, you must create an account by providing accurate, complete, and
+                current information. You agree to update your information promptly if any changes occur. </li>
+              <li>Account Security: You are responsible for maintaining the confidentiality of your account credentials,
+                including your username and password. You agree to notify us immediately of any unauthorized use of your
+                account. </li>
+              <li>Multiple Accounts: Each user is permitted to create only one account on the Platform. Creating
+                multiple accounts for the same individual is strictly prohibited and may result in account termination. 
+              </li>
+            </ul>
+            <h6>4. Game Rules and Fair Play</h6>
+            <ul class="text-justify text-secondary ">
+              <li>Game of Skill: The games available on the MyPride Gaming Platform, including but not limited to Ludo,
+                Rummy, and other skill-based games, are designed to be skill-based. The outcome is determined by the
+                players' abilities, strategies, and decision-making skills, with no significant role of luck or chance. 
+              </li>
+              <li>Game Rules: All games on the Platform are governed by their respective official rules as defined by
+                MyPride Gaming. You are required to familiarize yourself with these rules before participating. Any
+                violation of the game rules may result in disqualification. </li>
+              <li>Fair Play: We are committed to maintaining a fair and transparent gaming environment. Any attempt to
+                gain an unfair advantage, including but not limited to collusion, cheating, or use of unauthorized tools
+                (e.g., bots), is strictly prohibited. </li>
+              <li>Dispute Resolution: In the event of any dispute between players, the decision of AsprideTech Solutions
+                Pvt Ltd shall be final and binding. We reserve the right to withhold or reverse any winnings or credits
+                in cases of suspected fraud or violation of the game rules.</li>
+            </ul>
+            <h6>5. Deposits, Withdrawals, and Financial Transactions</h6>
+            <ul class="text-justify text-secondary ">
+              <li>Deposits: To participate in games, you must deposit funds into your account on the Platform. Deposits
+                can be made using the payment methods specified on the Platform. All deposits are final and
+                non-refundable, except as required by law. </li>
+              <li>Withdrawals: Winnings can be withdrawn from your account, subject to verification and compliance with
+                our withdrawal policies. You may be required to provide identification documents, such as a
+                government-issued ID, proof of address, and bank account details. </li>
+              <li>Transaction Limits: We reserve the right to impose limits on deposits, withdrawals, and other
+                financial transactions in accordance with applicable regulations and our internal policies. </li>
+              <li>Transaction Fees: AsprideTech Solutions Pvt Ltd may charge transaction fees for deposits, withdrawals,
+                or other financial activities on the Platform. These fees will be clearly disclosed to you before the
+                transaction is completed. </li>
+            </ul>
+            <h6>6. Entry Fees, Prizes, and Payouts</h6>
+            <ul class="text-justify text-secondary ">
+              <li>Entry Fees: Participation in games on the Platform may require payment of an entry fee, which will be
+                deducted from your account balance. The entry fee amount will be specified before you join a game. </li>
+              <li>Prize Structure: Prizes are awarded to the winners of each game based on the structure defined by
+                MyPride Gaming. The prize pool is determined by the total entry fees collected for that game. </li>
+              <li>Payouts: Prizes will be credited to the winner's account promptly after the conclusion of the game.
+                All payouts are final and non-transferable. </li>
+              <li>Taxes: You are solely responsible for reporting and paying any taxes or other governmental fees and
+                charges that may be imposed on your winnings, in accordance with the laws of your jurisdiction. </li>
+            </ul>
+            <h6>7. Responsible Gaming</h6>
+            <ul class="text-justify text-secondary ">
+              <li>Commitment to Responsible Gaming: We are committed to promoting responsible gaming and providing a
+                safe environment for all users. We offer tools and resources to help you manage your gaming activities,
+                including self-exclusion options, deposit limits, and time limits. </li>
+              <li>Self-Exclusion: If you believe that you are developing a gambling problem or wish to take a break from
+                gaming, you can opt for self-exclusion by contacting our support team. During the self-exclusion period,
+                you will be unable to access your account or participate in any games. </li>
+              <li>Helpline Information: If you need assistance with gambling addiction, we encourage you to seek help
+                from professional organizations.</li>
+            </ul>
+            <h6>8. Prohibited Activities</h6>
+            <ul class="text-justify text-secondary ">
+              <li>Fraud and Cheating: Any attempt to defraud or cheat the Platform, including but not limited to
+                collusion, use of bots, or manipulation of game results, is strictly prohibited and will result in
+                immediate account suspension or termination. </li>
+              <li>Multiple Accounts: You are prohibited from creating multiple accounts or using multiple identities to
+                participate in games or claim bonuses. </li>
+              <li>Illegal Activities: You must not use the Platform for any illegal or unauthorized purpose. Violations
+                of these Terms may result in legal action, including reporting to law enforcement authorities. </li>
+              <li>Money Laundering: AsprideTech Solutions Pvt Ltd is committed to preventing money laundering and other
+                illegal financial activities. We reserve the right to monitor and report any suspicious transactions in
+                compliance with applicable laws. </li>
+            </ul>
+            <h6>9. Privacy and Data Protection</h6>
+            <ul class="text-justify text-secondary ">
+              <li>Privacy Policy: Your privacy is important to us. Please refer to our Privacy Policy [Link to Privacy
+                Policy] for detailed information on how we collect, use, and protect your personal data. </li>
+              <li>Data Security: We implement reasonable security measures to protect your personal information from
+                unauthorized access, disclosure, or loss. However, no system is completely secure, and we cannot
+                guarantee the absolute security of your data. </li>
+              <li>User Consent: By using the Platform, you consent to the collection, use, and sharing of your personal
+                data as described in our Privacy Policy. </li>
+            </ul>
+            <h6>10. Intellectual Property </h6>
+            <ul class="text-justify text-secondary ">
+              <li>Ownership: All content, trademarks, logos, and other intellectual property on the Platform are the
+                property of AsprideTech Solutions Pvt Ltd or its licensors. You may not use, reproduce, or distribute
+                any content without our prior written consent. </li>
+              <li>User Content: By submitting any content to the Platform, you grant AsprideTech Solutions Pvt Ltd a
+                worldwide, non-exclusive, royalty-free license to use, reproduce, modify, and distribute your content in
+                connection with the operation of the Platform.</li>
+            </ul>
+            <h6>11. Limitation of Liability</h6>
+            <ul class="text-justify text-secondary ">
+              <li>No Warranty: The Platform is provided on an "as-is" and "as-available" basis. AsprideTech Solutions
+                Pvt Ltd makes no representations or warranties of any kind, express or implied, regarding the operation
+                or availability of the Platform or the accuracy of the information provided. </li>
+              <li>Limitation of Liability: To the fullest extent permitted by law, AsprideTech Solutions Pvt Ltd shall
+                not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from your
+                use of the Platform, including but not limited to loss of funds, data, or reputation. </li>
+              <li>Maximum Liability: Our total liability to you for any claims arising under these Terms or related to
+                the use of the Platform shall not exceed the amount of money you have deposited in your MyPride Gaming
+                account.</li>
+            </ul>
+            <h6>12. Indemnification</h6>
+            <ul class="text-justify text-secondary ">
+              <li>User Indemnification: You agree to indemnify and hold harmless AsprideTech Solutions Pvt Ltd, its
+                affiliates, and their respective officers, directors, employees, and agents from any and all claims,
+                liabilities, damages, losses, and expenses, including legal fees, arising from your use of the Platform
+                or violation of these Terms. </li>
+            </ul>
+            <h6>13. Amendments and Modifications</h6>
+            <ul class="text-justify text-secondary ">
+              <li>Right to Amend: AsprideTech Solutions Pvt Ltd reserves the right to amend or modify these Terms at any
+                time. We will notify you of any material changes by posting the revised Terms on the Platform and
+                updating the "Last Updated" date. Your continued use of the Platform after such changes constitutes your
+                acceptance of the revised Terms. </li>
+            </ul>
+            <h6>14. Contact Information</h6>
+            <ul class="text-justify text-secondary ">
+              <li>Customer Support: If you have any questions, concerns, or feedback regarding these Terms or the
+                Platform, please contact our customer support team at +91 7676350489.</li>
+            </ul>
+            <h6>15. Restricted Territories</h6>
+            <ul class="text-justify text-secondary ">
+              <li>Platform Availability: The MyPride Gaming Platform is not offered or available for use in the
+                following territories: Andhra Pradesh, Arunachal Pradesh, Assam, Meghalaya, Nagaland, Telangana, Sikkim,
+                and any location outside of India. </li>
+              <li>User Responsibility: It is the user's responsibility to ensure they are not accessing the Platform
+                from a restricted territory. Any attempt to bypass geographic restrictions, including the use of VPNs or
+                other methods, is strictly prohibited and may result in the suspension or termination of your account. 
+              </li>
+              <li>No Liability: AsprideTech Solutions Pvt Ltd is not liable for any consequences resulting from your
+                access to the Platform from a restricted territory. </li>
+            </ul>
+
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn about-btn w-100 py-2 mb-5 rounded-pill" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content ">
+        <div class="modal-header ">
+          <div class="gms-head d-flex justify-content-center align-items-center w-100  ">
+            <div class="op">
+              <h3>Privacy</h3>
+            </div>
+            <div class="gms">
+              <h3>Policy</h3>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body ">
+          <p class="text-justify text-secondary">This privacy policy (Privacy Policy) adopted by AsprideTech Solutions
+            Pvt Ltd (hereinafter referred to as “AsprideTech”, “We”, “Us” or “Our”) governs the collection, use, and
+            transfer of information capable of identifying a person (Personal Information) accessed or shared with Us by
+            virtue of use or access of our mobile applications or websites (Platform). By agreeing to this Privacy
+            Policy, or by accessing, or by using the Services (defined below) through the Platform, you consent to the
+            collection, transfer, adaptation, alteration, storage, disclosure, and other uses of your Personal
+            Information as described in this Privacy Policy. If you have any concerns about providing data, or having it
+            used in any manner permitted in this Privacy Policy, you should not use the AsprideTech Services. Unless
+            specified otherwise, this Privacy Policy applies only to the Platform and services, features, software, and
+            functionalities offered by Us, via the Platform. 
+            For the purposes of this Privacy Policy, “Sensitive Personal Data or Information” or “Sensitive Information”
+            means Personal Information that consists of (i) password, (ii) financial information, such as bank account,
+            debit or credit card details, (iii) physical, psychological and mental health condition, (iv) sexual
+            orientation, (v) medical records and history, (vi) biometric information, (vii) any detail relating to the
+            above as provided to the body corporate for providing a service, and (viii) any of the information received
+            under each of the aforesaid heads by the body corporate for processing, or to be stored or processed under a
+            lawful contract or otherwise. This Privacy Policy incorporates the requirements under the Information
+            Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules,
+            2011. </p>
+          <h6>1. Our Business & Policy Applicability</h6>
+          <ul class="text-justify text-secondary ">
+            <li>AsprideTech develops and operates software & technology products/platforms and associated services for
+              enabling, conducting, and offering online cash-based skill games i.e., games where there is a
+              preponderance of skill over chance, whether through the deployment of physical or mental skill (Services).
+              By accessing our Platform, users and players (hereinafter referred to as “Users/”You”/”Your”) can access
+              our Services, which include the provision of access to various games available on the Platform. As set out
+              in the terms and conditions relating to the Services (the “Terms”), you must be at least at a legal age
+              (minimum age of 18 years) to access and/or use the Services. The Services are not directed to persons
+              under the legal age of majority or any such persons residing outside India. We do not knowingly collect
+              any Personal Information from children under legal age. If We become aware that a child under legal age
+              has provided Personal Information, steps will be taken to remove such information and terminate such an
+              account. If you become aware that any Personal Information of a child/minor is provided, please contact
+              our Grievance Officer (defined below). For the purposes of this Privacy Policy, unless defined hereunder,
+              all capitalized terms shall have the meaning ascribed to them under the Terms. THIS PRIVACY POLICY DOES
+              NOT APPLY TO MOBILE APPLICATIONS OR WEBSITES WHICH ARE NOT OWNED OR CONTROLLED BY ASPRIDETECH, INCLUDING
+              THIRD-PARTY LINKS AND APPLICATIONS WITH WHICH YOU MAY INTERACT WHILE USING THE PLATFORM. WE WILL NOT
+              ASSUME ANY LIABILITY FOR ANY HARM CAUSED TO YOU BY ACCESSING ANY THIRD-PARTY WEBSITES OR LINKS ADVERTISED
+              ON THE PLATFORM. YOUR ACCESS AND USAGE OF ANY THIRD-PARTY WEBSITES OR APPS IS ENTIRELY AT YOUR OWN RISK.
+              THE COMPANY SHALL NOT BE A PARTY TO ANY TRANSACTION BETWEEN YOU AND A THIRD-PARTY SERVICE. </li>
+          </ul>
+          <h6>2. Collection & Use of Information</h6>
+          <p class="text-justify text-dark">A. Personal Information: We obtain and you hereby consent to provide your
+            Personal Information at the time of registration or from third-party service providers you interact with or
+            engaged by us. Such Personal Information includes: </p>
+          <ul class="text-justify text-secondary ">
+            <li>Registration: phone number/Google email ID, name, location. </li>
+            <li>Using wallet, payment functions: bank account details, payment method (including your UPI handle or
+              Virtual Payment Address associated with your registered mobile number), name, KYC proof documents. Please
+              note that we do not collect Aadhaar information. </li>
+            <li>Customer support correspondence: When you ask for assistance from Our customer support, the contact
+              information you provide will be collected, as well as information about your gameplay or activity on the
+              Service, your user ID number, your financial and payment information, and the correspondence. If available
+              through the Services, you may provide Us with certain profile information which you consent to make
+              public, such as a short biography, location, website, cell phone, a picture, information to customize your
+              account, etc. Such contact information may be used to send you information about the Services or related
+              information. </li>
+          </ul>
+          <h6></h6>
+          <p class="text-justify text-dark">B. Non-Personal / Aggregated Data:
+          <p class="text-justify text-secondary">Additionally, AsprideTech may use data management services to access
+            device information; metadata of incoming and outgoing calls and messages; device storage, device
+            identifiers, call related information and records, application history, etc. These permissions are collected
+            to better understand how users access and use our Services, both on an aggregated and individualized basis,
+            in order to improve our Platform, analyze player traffic and activity, respond to user desires and
+            preferences, and for other research and analytical purposes. This includes: </p>
+          </p>
+          <ul class="text-justify text-secondary ">
+            <li>Ads: Advertisers on mobile devices sometimes use advertising identifiers to enable and optimize their
+              advertising, to deliver tailored ads related to your interests (Interest-Based Advertising or IBA). These
+              identifiers are non-permanent, non-personal, device identifiers. We and/or third parties may use your
+              device’s advertising identifier and other information associated with it, to deliver ads that relate to
+              your interests and to improve and measure the effectiveness of ad campaigns. </li>
+            <li>Location Services: We and/or third parties may use and store information about your location to provide
+              special features, to deliver ads that relate to your interests and/or to improve and customize the
+              Services and to ensure that you are not accessing the Platform from restricted states in India or outside
+              the territorial limits of the Republic of India. </li>
+            <li>Log Data Services: Our backend servers automatically record information created by your use of the
+              Services. This data may include information such as your IP address, browser type, operating system, the
+              referring web page, pages visited, location, your mobile carrier, device and application IDs, search
+              terms, and cookie information. Log data is received when you interact with the Services. This data is used
+              to provide the Services and to measure, customize, and improve them. </li>
+            <li>Third-party services: We use a variety of third-party services to help the provision of the Services,
+              such as hosting and other services. These third-party service providers may collect information sent by
+              your browser as part of a web page request, such as cookies or your IP address, location, and devices’
+              unique identifiers. Also, third-party ad partners may share information to measure ad quality and tailor
+              ads, for example, to display ads about things you may have already shown interest in. </li>
+            <li>Device Management Services: The Device Management Services access device information; data, metadata of
+              incoming and outgoing calls and messages; device storage, device identifiers, call related information and
+              records, application history, etc. These permissions are collected to better understand how users access
+              and use our Services, both on an aggregated and individualized basis, in order to improve our Services,
+              analyze player traffic and activity, respond to user desires and preferences, and for other research and
+              analytical purposes. </li>
+          </ul>
+          <p class="text-justify text-dark">C. Sensitive Personal Data or Information Collected: </p>
+          <p class="text-justify text-secondary">Please note that We shall always take your express consent before
+            collecting any Sensitive Personal Data or Information. We are committed to keeping all such Sensitive
+            Personal Data or Information safe at all times and ensure that such data/information is only transacted
+            provided the highest possible degree of care available under the technology presently in use. AsprideTech
+            will not use Your Sensitive Personal Data or Information for any purpose other than for such specific
+            purposes as you have expressly consented to its use. </p>
+          <ul class="text-justify text-secondary">
+            <li>If you opt for the paid functions on the Platform, AsprideTech may collect the billing and financial
+              information necessary to process the charges, including bank account details; and/or do so on behalf of
+              the relevant payment service providers. Purchases of third-party services are subject to the policies
+              applicable to such providers. Any payment data may need to be retained only within India to comply with
+              directives of the Reserve Bank of India that apply to the payment service providers we engage to provide
+              the services. </li>
+            <li>Where we permit any third parties to collect and use your Sensitive Personal Information, we, to the
+              best of our knowledge, (i) ensure that such third parties maintain the same security standards that are
+              adhered to by us and prescribed under applicable data protection laws for the protection of your Sensitive
+              Personal Information and (ii) take reasonable measures to ensure that the third parties do not disclose
+              the Sensitive Personal Information unless such disclosure has been expressly consented to by you. </li>
+            <li>When You deposit money to Your wallet on the Platform by using a Virtual Payment Address (VPA) of the
+              Unified Payments Interface (UPI) payment method, We may store such VPA to facilitate seamless and swift
+              deposit transactions for You in the future and for enhancing Your payment experience. You understand,
+              agree, and consent to such storing of the VPA by the Platform. </li>
+            <li>The Platform may also, from time to time, through the Payment System Providers, fetch other VPAs
+              associated with Your mobile number registered with the Platform. These VPAs will be used to facilitate
+              seamless and swift deposit transactions for You and for enhancing Your overall payment experience. You
+              understand, agree, and consent to the Platform obtaining such VPAs from relevant Payment System Providers
+              and storing and displaying such VPAs to You on the Platform. </li>
+            <li>Disbursal Information Services: If you make a purchase in the Services, We may collect and store the
+              billing, payments, and financial information necessary to process the charges/payments; and/or do so on
+              behalf of the relevant payment service providers. Purchases of third-party services are subject to the
+              policies applicable to such providers.</li>
+          </ul>
+          <h6>3. Use of Information </h6>
+          <p class="text-justify text-secondary">Some of the Personal Information, for example, your name and/or
+            username, may be listed publicly on the Services, including on your profile page and in search results. You
+            agree that We and/or third parties on our behalf and/or our partners may use and store the Personal
+            Information for the purposes of contacting you as part of customer support; to send you updates or
+            information about the Services; managing your account and relationship with the Service, improving the
+            in-app experience, facilitating seamless transactions, improving the Services, research, surveying, and
+            engaging with you, for example by sending you communications for these purposes; marketing and promotion of
+            the Services or other products; to personalize and optimize the Services, promotional content, and/or
+            advertising; to create reports, analysis, or similar services for the purposes of research or business
+            intelligence. In certain circumstances, such as improving Your user experience or enabling seamless payment
+            transactions for You on any online platform that We operate, we may use Your financial information
+            (including your UPI handle or Virtual Payment Address) to display it on the relevant payment processing or
+            checkout page of such a platform. </p>
+
+          <h6>4. Information Sharing and Disclosure </h6>
+          <p class="text-justify text-dark">We may disclose your Personal Information in the circumstances set out below
+            and you hereby consent to the same to be shared with: </p>
+          <p class="text-justify text-dark">Provision of Services: any third-party service provider to whom disclosure
+            is necessary to enable Us to provide You with the services which You wish to access on or through the
+            Platform, for example, to process a disbursal instruction your Information has to be provided to the </p>
+          <p class="text-justify text-dark">payment processors. Such companies shall be granted access to the Personal
+            Information needed to perform their functions and include :</p>
+          <div class="d-flex text-align-center justify-content-around">
+            <div>
+              <h6 class="fs-6 text-primary">Third-Party Data Recipient Entity Name</h6>
+              <li class="text-justify text-secondary"> Payment gateways and payment aggregators  </li>
+              <li class="text-justify text-secondary">SMS OTP providers</li>
+              <li class="text-justify text-secondary">IP Reverse Geolocation Providers </li>
+              <li class="text-justify text-secondary">Analytical and data management service providers</li>
+
+            </div>
+            <div>
+              <h6 class="fs-6 text-primary text-align-end">Service/Function </h6>
+              <li class="text-justify text-secondary">For making transactions and depositing and withdrawing money with
+                us</li>
+              <li class="text-justify text-secondary">For the generation of OTP </li>
+              <li class="text-justify text-secondary">To ascertain and act against Users from restricted jurisdictions
+              </li>
+              <li class="text-justify text-secondary">To obtain services for smooth functioning of the Platform and
+                <br />&ensp;&ensp;&ensp;customizing the Platform for the needs of the Users, sharing such data
+                <br />&ensp;&ensp;&ensp;with data analytics services and tools 
+              </li>
+
+            </div>
+          </div>
+          <ul class="text-justify text-secondary">
+            <li class="text-justify text-secondary mt-1">Law Enforcement: (i) any person/entity to whom disclosure is
+              necessary
+              in accordance with applicable law; (ii) any government or statutory authority or court of law or judicial
+              forum to whom disclosure is necessary in accordance with applicable law; (iii) in circumstances We believe
+              necessary or appropriate to respond to valid claims and legal process, to protect the property and rights
+              of
+              AsprideTech, to protect the safety of the public or any person or User, or to prevent or stop any illegal,
+              unethical or legally actionable activity; and (iv) any person/entity to whom disclosure is necessary to
+              enable Us to enforce Our rights. </li>
+            <li class="text-justify text-secondary">Affiliates: to Our associate companies, business partners, agents,
+              or
+              third parties for the purposes of the services or any other marketing and promotional activity is
+              undertaken
+              by or on behalf of the Company. </li>
+            <li class="text-justify text-secondary">Change in Control: any entity that legally acquires the Company or
+              its
+              Platform. In the event that AsprideTech is involved in a bankruptcy, merger, acquisition, reorganization,
+              or
+              sale of assets, your Personal Information may be sold or transferred as part of that transaction. The
+              undertakings in this Privacy Policy shall apply to the Personal Information as transferred to the new
+              entity. </li>
+          </ul>
+          <h6>5. Your Rights </h6>
+          <p class="text-dark text-justify">We do not keep Your data for longer than is necessary unless we are required
+            to do so under applicable law. We will use Your Personal Information only for so long as is necessary: </p>
+          <ul class="text-justify text-secondary">
+            <li>to achieve the purposes that have been specifically identified in this Privacy Policy or such purposes
+              as having been identified in any agreement entered into with you</li>
+            <li>as required by applicable laws and regulations, or as may be required for evidentiary purposes </li>
+            <li>as deemed necessary for tax, fraud control, or mitigation, and to conduct a defense in relation to any
+              disputes or claims whether potential or actual (taking into account statute of limitations under
+              applicable laws). </li>
+            <li>Your right to withdraw consent relates to any further collection or processing of your Sensitive
+              Personal Information; however, such withdrawal of consent shall not: (i) be retrospective or require the
+              deletion of records required for statutory purposes; or (ii) operate where required for the discharge of
+              ongoing contractual obligations unless the contract under which the Sensitive Personal Information is
+              required to be collected is also terminated with the request for withdrawal of consent to collect such
+              Sensitive Data. </li>
+            <li>Your data will be erased/deleted when it has served the purpose for which it was being collected and is
+              no longer necessary, where consent has been withdrawn, or where retention of such data is contrary to or
+              prohibited by applicable law. </li>
+            <li>You have the right to data portability, i.e., you have the right to receive a copy of your Personal
+              Information in a commonly used and structured, machine-readable format and have it transferred to another
+              service provider or third party after paying us a fee which shall be communicated upon your request. </li>
+          </ul>
+          <h6>6. Protection of Information </h6>
+          <p class="text-secondary text-justify">AsprideTech maintains appropriate technical and physical safeguards to protect Information against accidental or unlawful destruction or loss, alteration, unauthorized disclosures or access, and any other unlawful forms of processing of the data in its possession (Security Practices). All information provided by You is stored and retained on a secure server located in Mumbai, India. Such Security Practices include, but are not limited to encryption, firewalls, password protection, limitation of access to specified personnel on a need-to-know basis, de-identification, encryption, and other physical security measures to guard against unauthorized access to the server and systems and information residing on such server and systems. AsprideTech’s Security Practices are commensurate with the information assets being protected and with the nature of the business. By using the Platform, you accept that the Security Practices and procedures mentioned above, which are designed to protect the information provided by You, are reasonable. Information including Sensitive Personal Data or Information (other than such data that is subject to data localization due to statutory or regulatory obligations) may be transferred to third parties located and/or may be stored at worldwide destinations, outside India or the location from which your information has been collected which ensure a similar level of protection and security adhered to by us under applicable Indian laws. However, we do not guarantee that Personal Information cannot be accessed, disclosed, altered, or destroyed by breach of any of the abovementioned safeguards. We take all steps reasonably necessary, including providing notice of breach to users, where required under applicable law, to ensure that Personal Information is treated securely and in accordance with this Privacy Policy. Irrespective of which country you reside in or supply information from, you authorize Us to store and/or use the Information according to this Privacy Policy in any country where We may operate. PLEASE UNDERSTAND THAT, WHILE WE STRIVE TO PROTECT YOUR PERSONAL INFORMATION AGAINST POTENTIAL RISKS AND EXPOSURES, THERE IS NO ABSOLUTE SECURITY IN THE ONLINE/ INTERNET SPHERE. THEREFORE, YOU MUST NOT DISCLOSE ANY INFORMATION ON THE PLATFORM THAT IS SENSITIVE PERSONAL DATA OR INFORMATION WHICH IS NOT REQUIRED FOR YOU TO USE OUR SERVICES. YOU UNDERSTAND THAT THE TRANSMISSION OF INFORMATION OVER THE INTERNET IS NOT COMPLETELY SECURE AND THERE ARE RISKS ASSOCIATED WITH IT. ALTHOUGH WE STRIVE TO PROTECT YOUR PERSONAL INFORMATION, WE CANNOT GUARANTEE THE SECURITY OF THE SAME WHILE IT IS BEING TRANSMITTED TO OUR PLATFORM AND ANY TRANSMISSION IS AT YOUR OWN RISK.</p>
+        <h6>7. Term </h6>
+        <p class="text-secondary text-justify">We may retain the Information for as long as is necessary to fulfill the purposes for which it was collected or as needed to provide the Services, even after you have discontinued or deleted any account, or after the end of the provision of the Services, if retention of such Personal Information is reasonably necessary to comply with legal obligations, meet regulatory requirements, resolve disputes between users, prevent fraud, or any other use. Subsequent to such a term, we will delete or anonymize your Personal Information once the purpose has been fulfilled. </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn about-btn w-100 py-2 mb-5 rounded-pill" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="modal fade" id="FAQModal" tabindex="-1" aria-labelledby="FAQLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content ">
+        <div class="modal-header ">
+          <div class="gms-head d-flex justify-content-center align-items-center w-100  ">
+        
+            <div class="gms">
+              <h3>FAQ's</h3>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body ">
+          document.addEventListener('DOMContentLoaded', () => {
+            const faqs = [
+                {
+                    question: "What is your return policy?",
+                    answer: "Our return policy allows you to return items within 30 days of purchase for a full refund. Please ensure that items are in their original condition and packaging."
+                },
+                {
+                    question: "How can I track my order?",
+                    answer: "Once your order is shipped, you will receive a tracking number via email. You can use this tracking number on our website or the carrier’s website to monitor the status of your delivery."
+                },
+                {
+                    question: "Do you offer international shipping?",
+                    answer: "Yes, we offer international shipping to most countries. Shipping costs and delivery times will vary depending on the destination."
+                },
+                {
+                    question: "What payment methods do you accept?",
+                    answer: "We accept a variety of payment methods, including credit cards, debit cards, and PayPal. For more information, please visit our payment options page."
+                },
+                {
+                    question: "How can I contact customer support?",
+                    answer: "You can reach our customer support team via email at support@example.com, or by phone at 1-800-123-4567. We’re available Monday through Friday from 9 AM to 5 PM."
+                }
+            ];
+        
+            const faqsContainer = document.getElementById('faqs-container');
+        
+            faqs.forEach(faq => {
+                const faqElement = document.createElement('div');
+                faqElement.classList.add('faq-item');
+                faqElement.innerHTML = `
+                    <div class="question">${faq.question}</div>
+                    <div class="answer">${faq.answer}</div>
+                `;
+        
+                faqElement.addEventListener('click', () => {
+                    const answerElement = faqElement.querySelector('.answer');
+                    answerElement.style.display = answerElement.style.display === 'none' ? 'block' : 'none';
+                });
+        
+                faqsContainer.appendChild(faqElement);
+            });
+        });
+        
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn about-btn w-100 py-2 mb-5 rounded-pill" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+    <div class="modal fade" id="FAQModal" tabindex="-1" aria-labelledby="FAQLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="gms-head d-flex justify-content-center align-items-center w-100">
+                        <div class="gms">
+                            <h3>FAQ's</h3>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="faqs-container">
+                    <!-- FAQ content will be dynamically injected here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn about-btn w-100 py-2 mb-5 rounded-pill" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  <script src="./style/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
