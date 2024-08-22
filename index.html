@@ -185,7 +185,7 @@
           <span>Download Our Latest</span><span><br>Games</span>
         </div>
         <div class="dwn-right">
-          <button class="btn">Coming soon...</button>
+          <button class="btn" onclick="downloadFile()">Download Now</button>
         </div>
       </div>
     </div>
@@ -1143,6 +1143,12 @@
         }
       });
       </script>
+      <script>
+        function downloadFile() {
+            const url = 'https://docs.google.com/uc?export=download&id=1i09Av2Q0x4LNqKQXnHGONK5YtfhTHhjJ';
+            window.location.href = url;
+        }
+    </script>
       
   <script src="./style/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
