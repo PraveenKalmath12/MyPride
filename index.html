@@ -184,7 +184,7 @@
         <div class="dwn-left">
           <span>Download Our Latest</span><span><br>Games</span>
         </div>
-        <div class="dwn-right">
+        <div class="dwn-right btn">
           <button class="btn" onclick="downloadFile()">Download Now</button>
         </div>
       </div>
@@ -1145,11 +1145,14 @@
       </script>
       <script>
         function downloadFile() {
-            const url = 'https://docs.google.com/uc?export=download&id=1i09Av2Q0x4LNqKQXnHGONK5YtfhTHhjJ';
-            window.location.href = url;
+          const link = document.createElement('a');
+          link.href = './src/Ludo.apk';
+          link.download = 'Ludo.apk';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
         }
-    </script>
-      
+        </script>
   <script src="./style/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
