@@ -626,9 +626,10 @@
         <!-- Column 3: Legal Links -->
         <div class="col-md-3 col-12 d-flex flex-column align-items-center text-center mb-4">
           <div class="text-light mb-3">
-            <a href="?modal=terms" style="text-decoration: none;"  class="d-block mb-2 text-light">Terms and Conditions</a>
-            <a href="?modal=privacy" style="text-decoration: none;" class="d-block mb-2 text-light" >Privacy Policy</a>
-            <a href="?modal=faq" style="text-decoration: none;" class="d-block mb-2 text-light">FAQs</a>
+            <a href="?modal=terms_and_condition" style="text-decoration: none;"  class="d-block mb-2 text-light">Terms and Conditions</a>
+            <a href="?modal=privacy_policy" style="text-decoration: none;" class="d-block mb-2 text-light" >Privacy Policy</a>
+            <a href="?modal=refund_policy" style="text-decoration: none;" class="d-block mb-2 text-light" >Refund Policy</a>
+            <a href="?modal=FAQ" style="text-decoration: none;" class="d-block mb-2 text-light">FAQs</a>
           
           </div>
         </div>
@@ -1084,6 +1085,81 @@
     </div>
   </div>
 
+
+
+  <div class="modal fade" id="refundModal" tabindex="-1" aria-labelledby="refundLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content ">
+        <div class="modal-header ">
+          <div class="gms-head d-flex justify-content-center align-items-center w-100  ">
+            <div class="op">
+              <h3>Refund</h3>
+            </div>
+            <div class="gms">
+              <h3>&ensp;Policy</h3>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body ">
+          <p class="text-justify text-secondary">At AsprideTech Solutions Pvt Ltd, we are committed to ensuring a fair and transparent gaming experience for all our players. Please read our refund policy carefully before participating in any games on our platform. </p>
+          <h6>1. No Refund on Entry Fees</h6>
+          <ul class="text-justify text-secondary ">
+            <li>Entry fees paid for participating in games or tournaments on our platform are non-refundable. Once a game has been initiated, no refund requests will be entertained, regardless of the outcome of the game.</li>
+          </ul>
+          <h6>2. Accidental or Unauthorized Payments</h6>
+          <ul class="text-justify text-secondary ">
+            <li>In the case of accidental payments or unauthorized transactions, users may contact our support team within 24 hours of the transaction. Refund requests for such cases will be reviewed on a case-by-case basis, and decisions will be made at our sole discretion. </li>
+            <li>Please note that refund requests after 24 hours from the time of the transaction will not be considered.</li>
+          </ul>
+        
+          <h6>3. Game or Technical Errors</h6>
+          <ul class="text-justify text-secondary">
+            <li class="text-justify text-secondary mt-1">If a game is interrupted or canceled due to a technical issue from our end, we may refund the entry fee or allow re-entry into the game, depending on the specific circumstances. Such refunds or re-entries will be issued at our discretion after thorough verification. </li>
+            </ul>
+       
+
+          <h6>4. Withdrawal-Related Refunds</h6>
+          <ul class="text-justify text-secondary">
+            <li class="text-justify text-secondary">
+              If a withdrawal request is not processed within the promised time due to technical issues, users may contact our support team for assistance. In such cases, we may reverse the transaction or provide an alternative solution after reviewing the situation.
+            </li>
+          </ul>
+         
+          <h6>5. Refund Process</h6>
+          <ul class="text-justify text-secondary">
+            <li class="text-justify text-secondary">
+              Approved refunds will be processed back to the original payment method within 7-10 business days. Users will be notified via email once the refund has been initiated.
+            </li>
+            <li class="text-justify text-secondary">
+              In case of delays beyond the mentioned timeframe, users are encouraged to contact our support team.
+          </li>
+          </ul>
+
+          <h6>6. Contact Us</h6>
+          <ul class="text-justify text-secondary">
+            <li class="text-justify text-secondary">
+              For any refund-related inquiries or issues, please reach out to our support team at support@mypridegames.com.
+            </li>
+          </ul>
+
+          <h6>7. Changes to the Refund Policy</h6>
+          <ul class="text-justify text-secondary">
+            <li class="text-justify text-secondary">
+              AsprideTech Solutions Pvt Ltd reserves the right to modify or update this Refund Policy at any time. Any changes will be effective immediately upon posting on our website. We encourage users to review this policy periodically.
+            </li>
+          </ul>
+              
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn about-btn w-100 py-2 mb-5 rounded-pill" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
     <div class="modal fade" id="FAQModal" tabindex="-1" aria-labelledby="FAQLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -1129,13 +1205,17 @@
         // Open modal based on URL parameter
         if (modalParam) {
           switch (modalParam) {
-            case 'terms':
+            case 'terms_and_condition':
               openModal('termsModal');
               break;
-            case 'privacy':
+            case 'privacy_policy':
               openModal('privacyModal');
               break;
-            case 'faq':
+              case 'refund_policy':
+              openModal('refundModal');
+              break;
+              
+            case 'FAQ':
               openModal('FAQModal');
               break;
             default:
