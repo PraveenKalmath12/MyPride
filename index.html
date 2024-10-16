@@ -110,29 +110,6 @@
   border: 0;
 }
 
-#ludoModal {
-            display: none; 
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            background-color: rgba(0, 0, 0, 0.5); 
-            z-index: 1000; 
-        }
-        .modal-content {
-            background: white; 
-            margin: 100px auto; 
-            padding: 20px; 
-            width: 80%; 
-            height: 80%;
-            position: relative;
-        }
-        .close-btn {
-            cursor: pointer; 
-            float: right; 
-            font-size: 24px;
-        }
 
 
   </style>
@@ -168,6 +145,9 @@
             <li class="nav-item">
               <a href="#"  class="nav-link" data-bs-toggle="modal" data-bs-target="#FAQModal">FAQs</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="openPopup()">Login</a>
+          </li>
           </ul>
           <a href="#contact" class="btn contact-us-btn">Contact Us</a>
         </div>
@@ -643,11 +623,6 @@
             <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
             <li class="nav-item"><a href="#games" class="nav-link">Games</a></li>
             <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
-            <li class="nav-item">
-              <a href="javascript:void(0);" class="nav-link" onclick="openLudoPopup()">Login (Popup)</a>
-              <!-- Uncomment the line below to use the modal instead -->
-              <!-- <a href="javascript:void(0);" class="nav-link" onclick="openLudoModal()">Login (Modal)</a> -->
-          </li>
           </ul>
         </div>
     
@@ -1215,30 +1190,11 @@
         </div>
     </div>
 
-
-
-    <div id="ludoModal">
-      <div class="modal-content">
-          <span class="close-btn" onclick="closeLudoModal()">&times;</span>
-          <iframe src="https://www.mypridegames.com/public/Ludo/index.html" style="width:100%; height:100%;" frameborder="0"></iframe>
-      </div>
-  </div>
-
-  <script>
-    // Method 1: Open in a New Window
-    function openLudoPopup() {
-        window.open('/ludo/index.html', 'LudoGame', 'width=800,height=600');
-    }
-
-    // Method 2: Open in a Modal
-    function openLudoModal() {
-        document.getElementById('ludoModal').style.display = 'block';
-    }
-
-    function closeLudoModal() {
-        document.getElementById('ludoModal').style.display = 'none';
-    }
-</script>
+    <script>
+      function openPopup() {
+          window.open('https://www.mypridegames.com/public/Ludo/index.html', 'LoginPopup', 'width=800,height=600,scrollbars=yes');
+      }
+  </script>
 
     <script>
       document.addEventListener("DOMContentLoaded", function() {
