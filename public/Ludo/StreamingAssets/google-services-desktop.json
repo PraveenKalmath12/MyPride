@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "53295659931",
+    "firebase_url": "https://mypride-60670-default-rtdb.firebaseio.com",
+    "project_id": "mypride-60670",
+    "storage_bucket": "mypride-60670.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53295659931:android:76f1fe2cb8eda7f4c8bf3e",
+        "android_client_info": {
+          "package_name": "com.MyPrideGames.LUDO"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRuDH1710DBJLriNUZ7MbWWpEd6xxT7mc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
