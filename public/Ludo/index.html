@@ -10,7 +10,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=430 height=800 tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=430 height=550 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -73,7 +73,7 @@
         canvas.className = "unity-mobile";
       } else {
         canvas.style.width = "430px";
-        canvas.style.height = "800PX";
+        canvas.style.height = "550pz";
       }
 
       loadingBar.style.display = "block";
@@ -88,7 +88,6 @@
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
           };
-
           unityInstance.SetFullscreen(1);
         }).catch((message) => {
           alert(message);
